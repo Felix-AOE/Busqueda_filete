@@ -7,40 +7,55 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         
-        <link href="css/bootstrap4/tail.select-default.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/default/tail.select-light-feather.css" rel="stylesheet" type="text/css" />
 
     </head> 
     <body>
     
         <div class="container mt-5">
             <div class="row">
-                <div class="col md-4 text-right">
-                    <select id="select1" >
-                        <option>wasd</option>
-                        <option>asd</option>
-                        <option>hola</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <select multiple id="select2">
-                        <option>wasd</option>
-                        <option>asd</option>
-                        <option>hola</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <select class="select-move" multiple>
-                        <optgroup label="Gente xD">
-                            <option data-description="Me quiero suicidar">Felix</option>
-                            <option data-description="Ultra xD">Gustavo</option>
-                            <option data-description="Suicide yourselve">Jony</option>
-                        </optgroup>
-                    </select>
+                <div class="col md-12 text-right">
+                    <div class="col-md-6">
+                        <select class="select-move" id="dropdown-prueba" multiple onclick="visualiza_formulario()">
+                            <div class="row">
+                                <div class="col-6">
+                                    <optgroup label="">      
+                                        <option  data-description="">Cruceros 1sdaas</option>
+                                        <option data-description="">Cruceros por Asi</option>
+                                        <option data-description="">Cruceros por Aus</option>
+                                        <option data-description="">Cruceros por el </option>
+                                        <option data-description="">Cruceros por la </option>
+                                        <option data-description="">Cruceros en el n</option>
+                                    </optgroup>
+                                </div>
+                                <div class="col-6">
+                                    <optgroup label="">      
+                                        <option data-description="">Cruceros a Áfric2</option>
+                                        <option data-description="">Cruceros por Asia</option>
+                                        <option data-description="">Cruceros por Aust</option>
+                                        <option data-description="">Cruceros por el M</option>
+                                        <option data-description="">Cruceros por la R</option>
+                                        <option data-description="">Cruceros en el no</option>
+                                    </optgroup>
+                                </div>              
+                            </div>
+                        </select>
+                    </div> 
                     <div class="tail-move-container"></div>
                 </div>
+
+                <select class="select" multiple>
+                    <option>[...]</option>
+                    <option>[asd</option>
+                    <option>adasdasdas</option>
+                </select>
             </div>
+
+            
+
+
         </div>
-asdasdasd
+      
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -49,21 +64,23 @@ asdasdasd
 
 
 
-        <script type="text/javascript" src="js/tail.select-full.min.js"></script>
+        <script type="text/javascript" src="js/tail.select-full.js"></script>
         <!-- <script type="text/javascript" src="langs/tail.select-{lang}.js"></script> -->
         <script type="text/javascript">
-            tail.select('#select1', { /* Your Options */ });
-            tail.select('#select2', { /* Your Options */ });
             tail.select(".select-move", {
-                search: true,
-                descriptions: true,
-                hideSelected: true,
-                hideDisabled: true,
-                multiLimit: 15,
-                multiShowCount: false,
-                multiContainer: ".tail-move-container"
+                animate: true,              // [0.3.0]      Boolean
+                classNames: null,           // [0.2.0]      Boolean, String, Array, null
+                height: 350,                // [0.2.0]      Integer, null
+                //width: 400,
+                multiple: true,            // [0.2.0]      Boolean
+                multiLimit: Infinity,       // [0.3.0]      Integer, Infinity
+                multiContainer: true,      // [0.3.0]      Boolean, String
+                multiSelectAll: true,      // [0.4.0]      Boolean
+                search: true              // [0.3.0]      Boolean
             });
+            tail.select(".select");
         </script>
+        
 
     </body>
 </html>
