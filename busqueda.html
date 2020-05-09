@@ -14,9 +14,9 @@
     
         <div class="container mt-5">
             <div class="row">
-                <div class="col md-12 text-right">
-                    <div class="col-md-6">
-                        <select class="select-move" id="dropdown-prueba" multiple onclick="visualiza_formulario()">
+                <div class="col md-6 text-right">
+                    <div class="col-md-4">
+                        <select class="select-move doble"  multiple >
                             <div class="row">
                                 <div class="col-6">
                                     <optgroup label="">      
@@ -43,12 +43,25 @@
                     </div> 
                     <div class="tail-move-container"></div>
                 </div>
-
-                <select class="select" multiple>
-                    <option>[...]</option>
-                    <option>[asd</option>
-                    <option>adasdasdas</option>
-                </select>
+                <div class="col-md-4">
+                    <select class="select" multiple>
+                        <option>Norwegian Bliss</option>
+                        <option>Norwegian Breakaway</option>
+                        <option>Norwegian Dawn</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-4">
+                    <div class="col-md-4">
+                        <select class="select wasd " multiple>
+                            <option>1-4 Dias</option>
+                            <option>5-8 Dias</option>
+                            <option>9-14 Dias</option>
+                            <option>+15 Dias</option>
+                        </select>
+                    </div>
+                </div>
             </div>
 
             
@@ -64,22 +77,68 @@
 
 
 
-        <script type="text/javascript" src="js/tail.select-full.js"></script>
-        <!-- <script type="text/javascript" src="langs/tail.select-{lang}.js"></script> -->
+        <script type="text/javascript" src="js/tail.select-full.js"></script> 
+        
         <script type="text/javascript">
             tail.select(".select-move", {
                 animate: true,              // [0.3.0]      Boolean
-                classNames: null,           // [0.2.0]      Boolean, String, Array, null
                 height: 350,                // [0.2.0]      Integer, null
-                //width: 400,
+                width: 400,
                 multiple: true,            // [0.2.0]      Boolean
                 multiLimit: Infinity,       // [0.3.0]      Integer, Infinity
                 multiContainer: true,      // [0.3.0]      Boolean, String
                 multiSelectAll: true,      // [0.4.0]      Boolean
-                search: true              // [0.3.0]      Boolean
+                search: true,              // [0.3.0]      Boolean
+                locale: "es"
             });
-            tail.select(".select");
+
+            tail.select(".select", {
+                animate: true,              // [0.3.0]      Boolean
+                classNames: null,           // [0.2.0]      Boolean, String, Array, null
+                height: 350,                // [0.2.0]      Integer, null
+                width: 300,
+                multiple: true,            // [0.2.0]      Boolean
+                multiLimit: Infinity,       // [0.3.0]      Integer, Infinity
+                multiContainer: true,      // [0.3.0]      Boolean, String
+                multiSelectAll: true,      // [0.4.0]      Boolean
+                search: true ,             // [0.3.0]      Boolean
+                locale: "es"
+            });
+
+           tail.select(".wasd", {
+                animate: true,              // [0.3.0]      Boolean
+                classNames: null,           // [0.2.0]      Boolean, String, Array, null
+                height: 350,                // [0.2.0]      Integer, null
+                width: 300,
+                multiple: true,            // [0.2.0]      Boolean
+                multiLimit: Infinity,       // [0.3.0]      Integer, Infinity
+                multiContainer: true,      // [0.3.0]      Boolean, String
+                multiSelectAll: true,      // [0.4.0]      Boolean
+                search: true ,             // [0.3.0]      Boolean
+                locale: "es"
+            });
+
+            
+            setTimeout(()=>{
+               
+                const nodos = document.querySelectorAll(".tail-select .select-dropdown ul")
+                
+                if(nodos){
+
+                    const nodos_array = Array.from(nodos)
+
+                    if(Array.isArray(nodos_array)){
+                        nodos_array[1].style = "column-count:1 !important"
+                    }
+                    if(Array.isArray(nodos_array)){
+                        nodos_array[2].style = "column-count:1 !important; width:100px !important; margin-left:100px !important"
+                    }
+                }
+
+                
+            },200)
         </script>
+
         
 
     </body>

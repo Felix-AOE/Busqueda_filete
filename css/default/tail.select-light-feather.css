@@ -183,6 +183,9 @@
     transition: background 142ms linear, box-shadow 142ms linear;
     -webkit-transition: background 142ms linear, box-shadow 142ms linear;
 }
+
+
+
 .tail-select .select-label:after{
     top: 15px;
     right: 12px;
@@ -264,17 +267,17 @@
 
 /* @start DROPDOWN */
 .tail-select .select-dropdown{
-    top: 100%;
+   top: 100%;
     left: 0;
     color: #303438;
     /* Cambio de tamaño al hacer click  */
-    width: 150%;
+    width: 100%;
     /* Cambio de tamaño al hacer click  */
     min-height: 35px;
     margin: -1px 0 0 0;
     padding: 0;
     z-index: 30;
-    display: none;
+    display: none; 
     overflow: hidden;
     position: absolute;
     background-color: white;
@@ -285,6 +288,10 @@
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1), 0 0 1px 1px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1), 0 0 1px 1px rgba(0, 0, 0, 0.25);
 }
+.tail-select .select-dropdown .doble{
+    /*width: 150%;*/
+}
+
 .tail-select .select-dropdown .dropdown-search{
     width: 100%;
     margin: 0;
@@ -344,6 +351,8 @@
     line-height: 20px;
     vertical-align: top;
 }
+
+
 
 .tail-select .select-dropdown ul li{
     color: #303438;
