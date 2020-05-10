@@ -120,9 +120,10 @@
 
             
             setTimeout(()=>{
-               
+              /* 
                 const nodos = document.querySelectorAll(".tail-select .select-dropdown ul")
                 
+
                 if(nodos){
 
                     const nodos_array = Array.from(nodos)
@@ -131,11 +132,37 @@
                         nodos_array[1].style = "column-count:1 !important"
                     }
                     if(Array.isArray(nodos_array)){
-                        nodos_array[2].style = "column-count:1 !important; width:100px !important; margin-left:100px !important"
+                        nodos_array[2].style = "column-count:1 !important;"
+                        
                     }
                 }
+            */
 
-                
+                const selects = document.querySelectorAll(".tail-select .select-dropdown ul")
+                const selects_array = Array.from(selects) 
+
+                const selects2 = document.querySelectorAll(".dropdown-option")
+                const selects2_array = Array.from(selects2)
+
+                const selects3 = document.querySelectorAll(".dropdown-option:before")
+                const selects3_array = Array.from(selects3) 
+                console.log(selects3);
+
+                if (selects_array[1]) {
+                    selects_array[1].style = "column-count:1 !important"
+                }
+
+                if (selects_array[2]) {
+                    selects_array[2].style = "column-count:1 !important" 
+                    selects2_array[15].style ="padding-left: 100px; text-align: center;"
+                    selects2_array[16].style ="padding-left: 100px; text-align: center;"
+                    selects2_array[17].style ="padding-left: 100px; text-align: center;"
+                    selects2_array[18].style ="padding-left: 100px; text-align: center;"        
+                }
+               
+
+
+
             },200)
         </script>
 
